@@ -6,7 +6,7 @@ The `server` directory contains the ASP.NET Core backend application. It provide
 
 ## Key Technologies
 
-- ASP.NET Core (.NET 9 likely)
+- ASP.NET Core (.NET 9)
 - C#
 - Entity Framework Core (EF Core)
 - SignalR
@@ -88,9 +88,9 @@ server/
 ### Authentication (Clerk Integration)
 
 - Integrates with Clerk for authentication.
-- Likely validates JWTs received from the client in API requests (possibly via middleware configured in `Program.cs`).
-- `ClerkService.cs` probably handles interactions with the Clerk backend API if needed.
-- `WebhookController.cs` or `AuthController.cs` likely handles incoming webhooks from Clerk (e.g., user creation, updates, deletion) to keep the local user database in sync.
+- Validates JWTs received from the client in API requests via middleware configured in `Program.cs`.
+- `ClerkService.cs` handles interactions with the Clerk backend API.
+- `WebhookController.cs` and `AuthController.cs` handle incoming webhooks from Clerk (e.g., user creation, updates, deletion) to keep the local user database in sync.
 
 ### Real-time Communication (SignalR Hub)
 
